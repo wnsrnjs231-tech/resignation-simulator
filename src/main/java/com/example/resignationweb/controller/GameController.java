@@ -7,12 +7,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.context.annotation.SessionScope;
 
 // ==================================================
 // 게임 Controller
 // 웹 요청을 받고 GameService에게 게임 처리를 맡김
 // ==================================================
 @Controller
+@SessionScope
 public class GameController {
 
     // ==================================================
