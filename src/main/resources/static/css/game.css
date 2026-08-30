@@ -111,26 +111,22 @@ body {
 }
 
 /* ==================================================
-인간관계
-================================================== */
+   인간관계
+   ================================================== */
 
 .relationship-box {
-    margin-bottom: 22px;
-    padding: 20px;
+    margin-bottom: 12px;
+    padding: 10px 14px;
 
     background: #f5f7ff;
 
-    border-radius: 12px;
+    border-radius: 10px;
 
-}
-
-.relationship-box h3 {
-    margin-top: 0;
-    margin-bottom: 14px;
+    font-size: 14px;
 }
 
 .relationship-box p {
-    margin: 8px 0;
+    margin: 4px 0;
 }
 
 /* ==================================================
@@ -355,42 +351,127 @@ button:active {
 }
 
 /* ==================================================
-작은 화면 대응
-================================================== */
+   모바일 화면
+   ================================================== */
 
 @media (max-width: 600px) {
 
     body {
-    padding: 16px;
-}
+        padding: 8px;
+    }
 
     .game-container {
-        padding: 20px;
+        padding: 14px;
+        border-radius: 12px;
     }
 
     .game-title {
-        font-size: 27px;
+        margin-bottom: 16px;
+        font-size: 24px;
     }
 
     .player-header {
-        flex-direction: column;
+        flex-direction: row;
+        align-items: center;
 
-        align-items: flex-start;
+        padding: 10px 12px;
+        margin-bottom: 12px;
+
+        font-size: 14px;
     }
+
+    /* --------------------------------------------------
+       상태창을 모바일에서도 2열 유지
+       -------------------------------------------------- */
 
     .status-box {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+                repeat(2, 1fr);
+
+        gap: 7px;
+
+        margin-bottom: 12px;
     }
 
-    .choice-form {
-        grid-template-columns: 1fr;
+    .status-box p {
+        padding: 9px 8px;
+
+        font-size: 13px;
+    }
+
+    /* --------------------------------------------------
+       인간관계 영역 압축
+       -------------------------------------------------- */
+
+    .relationship-box {
+        margin-bottom: 12px;
+        padding: 12px;
+    }
+
+    .relationship-box h3 {
+        margin-bottom: 8px;
+        font-size: 16px;
+    }
+
+    .relationship-box p {
+        margin: 4px 0;
+        font-size: 13px;
+    }
+
+    /* --------------------------------------------------
+       이벤트 영역 압축
+       -------------------------------------------------- */
+
+    .event-box {
+        margin-bottom: 12px;
+        padding: 15px 10px;
     }
 
     .event-box h2 {
-        font-size: 19px;
+        font-size: 17px;
     }
 
-    .ending-box h2 {
-        font-size: 25px;
+    /* --------------------------------------------------
+       선택지 버튼
+       -------------------------------------------------- */
+
+    .choice-form {
+        grid-template-columns:
+                1fr 1fr;
+
+        gap: 7px;
+
+        margin-bottom: 12px;
+    }
+
+    .choice-form button {
+        min-height: 46px;
+
+        padding: 10px 7px;
+
+        font-size: 13px;
+    }
+
+    button {
+        padding: 11px 10px;
+
+        font-size: 13px;
+    }
+
+    /* --------------------------------------------------
+       각 메시지 영역 간격 축소
+       -------------------------------------------------- */
+
+    .message-box,
+    .result-box,
+    .warning-box,
+    .promotion-box {
+        margin-top: 10px;
+        padding: 12px;
+    }
+
+    .resign-box {
+        margin-top: 16px;
+        padding-top: 10px;
     }
 }
