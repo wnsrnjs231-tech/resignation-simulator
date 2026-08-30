@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '4.1.1'
+    id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+description = 'resignation-web'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // Spring Boot 기본 기능
+    implementation 'org.springframework.boot:spring-boot-starter'
+
+    // 웹 MVC 기능 사용
+    // @Controller, @GetMapping 등을 사용할 수 있게 함
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // Mustache 템플릿 사용
+    // game.mustache 화면 렌더링에 필요
+    implementation 'org.springframework.boot:spring-boot-starter-mustache'
+
+    // 테스트 기능
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // JUnit 실행
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

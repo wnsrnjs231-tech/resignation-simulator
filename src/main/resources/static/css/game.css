@@ -1,0 +1,396 @@
+/* ==================================================
+기본 설정
+================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+
+    font-family:
+            Arial,
+            "Apple SD Gothic Neo",
+            "Noto Sans KR",
+            sans-serif;
+
+    background: #f3f4f6;
+    color: #222;
+
+}
+
+/* ==================================================
+게임 전체 영역
+================================================== */
+
+.game-container {
+    width: 100%;
+    max-width: 760px;
+
+    margin: 0 auto;
+    padding: 32px;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    box-shadow:
+            0 10px 30px
+            rgba(0, 0, 0, 0.08);
+}
+
+/* ==================================================
+게임 제목
+================================================== */
+
+.game-title {
+    margin-top: 0;
+    margin-bottom: 28px;
+
+    text-align: center;
+
+    font-size: 32px;
+    font-weight: 800;
+}
+
+/* ==================================================
+날짜 / 직급
+================================================== */
+
+.player-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+    padding: 14px 18px;
+
+    background: #f8f9fa;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+}
+
+/* ==================================================
+플레이어 상태
+================================================== */
+
+.status-box {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+
+    margin-bottom: 22px;
+
+}
+
+.status-box p {
+    margin: 0;
+    padding: 14px 16px;
+
+    background: #f8f9fa;
+
+    border: 1px solid #ececec;
+    border-radius: 10px;
+}
+
+.status-box strong {
+    margin-left: 5px;
+
+    font-weight: 800;
+
+}
+
+/* ==================================================
+인간관계
+================================================== */
+
+.relationship-box {
+    margin-bottom: 22px;
+    padding: 20px;
+
+    background: #f5f7ff;
+
+    border-radius: 12px;
+
+}
+
+.relationship-box h3 {
+    margin-top: 0;
+    margin-bottom: 14px;
+}
+
+.relationship-box p {
+    margin: 8px 0;
+}
+
+/* ==================================================
+오늘의 이벤트
+================================================== */
+
+.event-box {
+    margin-bottom: 20px;
+    padding: 24px 20px;
+
+    text-align: center;
+
+    background: #fff8e1;
+
+    border-radius: 12px;
+}
+
+.event-box h2 {
+    margin: 0;
+
+    font-size: 21px;
+    line-height: 1.5;
+
+}
+
+/* ==================================================
+폼 기본 간격
+================================================== */
+
+form {
+    margin: 0;
+}
+
+/* ==================================================
+버튼 공통
+================================================== */
+
+button {
+    width: 100%;
+
+    padding: 14px 16px;
+    margin-top: 10px;
+
+    border: 0;
+    border-radius: 10px;
+
+    background: #333333;
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+            opacity 0.15s,
+            transform 0.1s;
+}
+
+button:hover {
+    opacity: 0.88;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* ==================================================
+일반 이벤트 선택지
+================================================== */
+
+.choice-form {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+.choice-form button {
+    margin-top: 0;
+
+    min-height: 56px;
+
+}
+
+/* ==================================================
+일반 메시지
+승진 / 월세 / 업무 태만 안내 등
+================================================== */
+
+.message-box {
+    margin-top: 16px;
+    padding: 15px 18px;
+
+    background: #f4f4f5;
+
+    border-left: 4px solid #8b8b8b;
+    border-radius: 9px;
+
+    line-height: 1.6;
+}
+
+/* ==================================================
+선택 결과 / 인사평가 결과
+================================================== */
+
+.result-box {
+    margin-top: 20px;
+    padding: 20px;
+
+    background: #eef6ff;
+
+    border-radius: 12px;
+
+}
+
+.result-box h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.result-box p {
+    margin-bottom: 0;
+
+    line-height: 1.7;
+
+}
+
+/* ==================================================
+업무 태만 / 경고 영역
+================================================== */
+
+.warning-box {
+    margin-top: 20px;
+    padding: 20px;
+
+    background: #fff1f1;
+
+    border: 1px solid #ffd6d6;
+    border-radius: 12px;
+}
+
+.warning-box h3 {
+    margin-top: 0;
+}
+
+/* ==================================================
+승진 선택 영역
+================================================== */
+
+.promotion-box {
+    margin-top: 20px;
+    padding: 22px;
+
+    background: #effcf3;
+
+    border: 1px solid #d2f4dc;
+    border-radius: 12px;
+
+}
+
+.promotion-box h2 {
+    margin-top: 0;
+
+    font-size: 22px;
+
+}
+
+/* ==================================================
+퇴사 버튼 영역
+================================================== */
+
+.resign-box {
+    margin-top: 30px;
+    padding-top: 20px;
+
+    border-top: 1px solid #e5e5e5;
+
+}
+
+.resign-box button {
+    background: #6b7280;
+}
+
+/* ==================================================
+게임 종료 화면
+================================================== */
+
+.ending-box {
+    margin-top: 25px;
+    padding: 36px 24px;
+
+    text-align: center;
+
+    background: #f8f8f8;
+
+    border-radius: 14px;
+}
+
+.ending-box h2 {
+    margin-top: 0;
+    margin-bottom: 18px;
+
+
+    font-size: 30px;
+}
+
+.ending-box p {
+    margin: 0 0 20px;
+
+    line-height: 1.8;
+
+    white-space: pre-line;
+}
+
+.ending-box button {
+    max-width: 300px;
+}
+
+/* ==================================================
+작은 화면 대응
+================================================== */
+
+@media (max-width: 600px) {
+
+    body {
+    padding: 16px;
+}
+
+    .game-container {
+        padding: 20px;
+    }
+
+    .game-title {
+        font-size: 27px;
+    }
+
+    .player-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .status-box {
+        grid-template-columns: 1fr;
+    }
+
+    .choice-form {
+        grid-template-columns: 1fr;
+    }
+
+    .event-box h2 {
+        font-size: 19px;
+    }
+
+    .ending-box h2 {
+        font-size: 25px;
+    }
+}
