@@ -56,6 +56,20 @@ Spring Boot와 Mustache를 사용해 만든 웹 기반 직장 생활 시뮬레�
 
 ---
 
+## 📸 실행 화면
+
+![실행 화면 1](images/1.png)
+
+![실행 화면 2](images/2.png)
+
+![실행 화면 3](images/3.png)
+
+![실행 화면 4](images/4.png)
+
+![실행 화면 5](images/5.png)
+
+---
+
 ## 🛠 기술 스택
 
 ### Backend

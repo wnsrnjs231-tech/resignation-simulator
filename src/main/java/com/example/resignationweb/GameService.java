@@ -235,6 +235,12 @@ public class GameService {
                 player.reputation
         );
 
+        // 업무 태만 누적 횟수
+        model.addAttribute(
+                "neglectCount",
+                player.neglectCount
+        );
+
         // ==================================================
         // 게임 종료 상태 화면 전달
         // ==================================================
@@ -1117,9 +1123,11 @@ public class GameService {
             if (performanceManager.isRecommendedResignation(
                     performanceScore)) {
 
-                // 게임 종료
                 player.gameOver =
                         true;
+
+                player.goodEnding =
+                        false;
 
                 // 권고사직 엔딩
                 player.endingMessage =
